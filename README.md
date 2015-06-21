@@ -22,21 +22,39 @@ Detailed comments of the import, tidying, aggregation, and output operations are
 In summary, the script does the following:
 
 *Read the measure column names, then clean them up to be valid for R dataframes
+
 *Use make.names to change special characters to periods (.) and enforce unique columns names
+
 *Use gsub to collapse three periods (...) and two periods (..) down to one (.) for readability
+
 *Read the activity labels table and set the column names to activityNum and activityLabel
+
 *Read the test tables and associated activity numbers and subject numbers, naming the columns appropriately
+
 *Assign descriptive measure column names to test measures table
+
 *Assign activityNum column name to test activity table
+
 *Assign subject column name to test subject table
+
 *Read the training tables and associated activity numbers and subject numbers, naming the columns appropriately
+
 *Assign descriptive measure column names to training measures table
+
 *Assign activityNum column name to training activity table
+
 *Assign subject column name to training subject table
+
 *Combine the activity and subject tables with the measures tables, then combine the two measures tables
+
 *Narrow down the columns to subject, ActivityName, and standar deviation/mean columns
-*Get the activity labels by merging meanStd with activityLabels data frame, keying on activityNum 
+
+*Get the activity labels by merging meanStd with activityLabels data frame, keying on activityNum
+
 *Remove the activityNum column
+
 *convert the subject from int to factor in order to perform aggregation
+
 *Generate the final aggregated tidy data frame by calculating the mean for all measure columns (".") by activityLabel and subject (see http://stackoverflow.com/questions/12064202/using-aggregate-for-multiple-aggregations)
+
 *Write the tidy set to tidy.txt
