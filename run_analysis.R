@@ -38,7 +38,7 @@ test <- cbind(subjectTest,ytest,xtest)
 train <- cbind(subjectTrain,ytrain,xtrain) 
 testtrain <- rbind(test, train) 
 
-#Narrow down the columns to subject, ActivityName, and standar deviation/mean columns
+#Narrow down the columns to subject, ActivityName, and standard deviation/mean columns
 meanStd <- select(testtrain,subject,activityNum,contains("std"),contains("mean"))
 
 #Get the activity labels by merging meanStd with activityLabels data frame, keying on activityNum 
