@@ -22,12 +22,9 @@ Detailed comments of the import, tidying, aggregation, and output operations are
 In summary, the script does the following:
 
 *Read the measure column names, then clean them up to be valid for R dataframes
-
 *Use make.names to change special characters to periods (.) and enforce unique columns names
-
 *Use gsub to collapse three periods (...) and two periods (..) down to one (.) for readability
-
-*Read the activity labels table and set the column names to activityNum and activityLabel
+**Read the activity labels table and set the column names to activityNum and activityLabel
 
 *Read the test tables and associated activity numbers and subject numbers, naming the columns appropriately
 
