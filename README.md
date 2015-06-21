@@ -20,18 +20,19 @@ The script run_analysis.R reads a set of Samsung data files, combines them, aggr
 ## How it works
 Detailed comments of the import, tidying, aggregation, and output operations are included within the run_analysis.R script itself.
 In summary, the script does the following:
+
 *Read the measure column names, then clean them up to be valid for R dataframes
-**Use make.names to change special characters to periods (.) and enforce unique columns names
-**Use gsub to collapse three periods (...) and two periods (..) down to one (.) for readability
+*Use make.names to change special characters to periods (.) and enforce unique columns names
+*Use gsub to collapse three periods (...) and two periods (..) down to one (.) for readability
 *Read the activity labels table and set the column names to activityNum and activityLabel
 *Read the test tables and associated activity numbers and subject numbers, naming the columns appropriately
-**Assign descriptive measure column names to test measures table
-**Assign activityNum column name to test activity table
-**Assign subject column name to test subject table
+*Assign descriptive measure column names to test measures table
+*Assign activityNum column name to test activity table
+*Assign subject column name to test subject table
 *Read the training tables and associated activity numbers and subject numbers, naming the columns appropriately
-**Assign descriptive measure column names to training measures table
-**Assign activityNum column name to training activity table
-**Assign subject column name to training subject table
+*Assign descriptive measure column names to training measures table
+*Assign activityNum column name to training activity table
+*Assign subject column name to training subject table
 *Combine the activity and subject tables with the measures tables, then combine the two measures tables
 *Narrow down the columns to subject, ActivityName, and standar deviation/mean columns
 *Get the activity labels by merging meanStd with activityLabels data frame, keying on activityNum 
