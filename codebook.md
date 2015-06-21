@@ -1,7 +1,7 @@
 #Codebook for dimensions and variables in tidy.txt 
 
 ##Overview
-The data in tiny.txt represents a mean aggregation of the data in "Human Activity Recognition Using Smartphones Data Set" from the UCI Center for Machine Learning and Intelligent Systems, described at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#
+The data in tiny.txt represents a mean aggregation of the data in "Human Activity Recognition Using Smartphones Data Set" from the UCI Center for Machine Learning and Intelligent Systems, described in detail at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#
 
 The original data were distributed across two sets of files, one representing 2947 sets of readings for testing and the other representing 7352 sets of readings for training. Each row of these measure files contained 561 measures. In addition, the test and training sets each included a file corresponding to subject identifiers and another file corresponding to activity identifiers for each set of readings.
 
@@ -9,7 +9,7 @@ All these files were combined together into a single dataset of 10299 rows (2947
 
 The aggregated values were stored in the dataset tidy.txt, with 88 columns (activity label, subject number, and 86 averaged measures) and 180 rows.
 
-##Variables
+##Variable descriptions
 The variables selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
@@ -37,7 +37,6 @@ These signals were used to estimate variables of the feature vector for each pat
 * fBodyGyroMag
 * fBodyGyroJerkMag
 
-
 The set of variables that were estimated from these signals are: 
 
 * mean(): Mean value
@@ -51,8 +50,11 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyGyroMean
 * tBodyGyroJerkMean
 
-Below is the complete list of aggregated mean variables of each feature vector:
+*Units
+*All measures whose column name contains "Acc" (acceleration) are reported using standard gravity units 'g'.
+*All measures whose column name contains "Gyro" (gyroscope readings of angular velocity) are reported in radians/second.
 
+*Complete list of aggregated mean variables of each feature vector:
 * tBodyAcc.std.X
 * tBodyAcc.std.Y
 * tBodyAcc.std.Z
