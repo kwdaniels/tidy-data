@@ -50,11 +50,11 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyGyroMean
 * tBodyGyroJerkMean
 
-*Units
-*All measures whose column name contains "Acc" (acceleration) are reported using standard gravity units 'g'.
-*All measures whose column name contains "Gyro" (gyroscope readings of angular velocity) are reported in radians/second.
+##Units
+* All measures whose column name contains "Acc" (acceleration) are reported using standard gravity units 'g'.
+* All measures whose column name contains "Gyro" (gyroscope readings of angular velocity) are reported in radians/second.
 
-*Complete list of aggregated mean variables of each feature vector:
+##Complete list of aggregated mean variables of each feature vector:
 * tBodyAcc.std.X
 * tBodyAcc.std.Y
 * tBodyAcc.std.Z
