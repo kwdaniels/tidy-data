@@ -11,7 +11,7 @@ measureColNames <- gsub("[.][.]",".",measureColNames )
 activityLabels <- read.table("activity_labels.txt")
 names(activityLabels) <- c("activityNum", "activityLabel")
 
-#Read the training tables and associated activity numbers and subject numbers, naming the columns appropriately
+#Read the test tables and associated activity numbers and subject numbers, naming the columns appropriately
 xtest <- read.table("X_test.txt")
 #Assign descriptive measure column names to test measures table
 names(xtest) <- measureColNames 
@@ -22,7 +22,7 @@ subjectTest <- read.table("subject_test.txt")
 #Assign subject column name to test subject table
 names(subjectTest)[1] <- "subject"
 
-#Read the test tables and associated activity numbers and subject numbers, naming the columns appropriately
+#Read the training tables and associated activity numbers and subject numbers, naming the columns appropriately
 xtrain <- read.table("X_train.txt")
 #Assign descriptive measure column names to training measures table
 names(xtrain) <- measureColNames 
