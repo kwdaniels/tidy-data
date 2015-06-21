@@ -19,13 +19,13 @@ The script run_analysis.R reads a set of Samsung data files, combines them, aggr
 
 ##How it works test
 * main point 1
-** sub point 1a
-** sub point 1b
+  * sub point 1a
+  * sub point 1b
 * main point 2
 
 
 ## How it works
-* Detailed comments of the import, tidying, aggregation, and output operations are included within the run_analysis.R script itself.
+Detailed comments of the import, tidying, aggregation, and output operations are included within the run_analysis.R script itself.
 * In summary, the script does the following:
 * Read the measure column names, then clean them up to be valid for R dataframes
 * Use make.names to change special characters to periods (.) and enforce unique columns names
