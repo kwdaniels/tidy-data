@@ -1,3 +1,4 @@
+library(dplyr)
 
 #Read the measure column names, then clean them up to be valid for R dataframes
 rawMeasureColNames  <- read.table("features.txt")
